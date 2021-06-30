@@ -21,7 +21,7 @@ import static ru.lepescin.studentbookslibrary.util.ValidationUtil.checkNew;
 @RequestMapping(value = BookController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
 @Slf4j
 public class BookController {
-    static final String REST_URL = "/books";
+    static final String REST_URL = "/api/books";
 
     @Autowired
     private BookService bookService;

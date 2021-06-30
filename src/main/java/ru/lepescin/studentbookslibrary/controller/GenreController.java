@@ -21,7 +21,7 @@ import static ru.lepescin.studentbookslibrary.util.ValidationUtil.checkNew;
 @RequestMapping(value = GenreController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
 @Slf4j
 public class GenreController {
-    static final String REST_URL = "/genres";
+    static final String REST_URL = "/api/genres";
 
     @Autowired
     private GenreService genreService;
