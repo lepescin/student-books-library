@@ -33,7 +33,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 @AllArgsConstructor
 @Slf4j
 public class AccountController implements RepresentationModelProcessor<RepositoryLinksResource> {
-    static final String URL = "/api/account";
+    static final String URL = "/account";
 
     @SuppressWarnings("unchecked")
     private static final RepresentationModelAssemblerSupport<User, EntityModel<User>> ASSEMBLER =
@@ -68,7 +68,7 @@ public class AccountController implements RepresentationModelProcessor<Repositor
         user.setRoles(EnumSet.of(Role.USER));
         user = userRepository.save(user);
         URI uriOfNewResource = ServletUriComponentsBuilder.fromCurrentContextPath()
-                .path("/api/account")
+                .path("/account")
                 .build().toUri();
         return ResponseEntity.created(uriOfNewResource).body(ASSEMBLER.toModel(user));
     }
