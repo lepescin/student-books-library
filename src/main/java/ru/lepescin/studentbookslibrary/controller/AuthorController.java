@@ -1,5 +1,6 @@
 package ru.lepescin.studentbookslibrary.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,6 +21,7 @@ import static ru.lepescin.studentbookslibrary.util.ValidationUtil.checkNew;
 @RestController
 @RequestMapping(value = AuthorController.REST_URL, produces = MediaType.APPLICATION_JSON_VALUE)
 @Slf4j
+@Tag(name = "Author Controller")
 public class AuthorController {
     static final String REST_URL = "/api/authors";
 
